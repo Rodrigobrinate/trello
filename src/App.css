@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  background-color: #0079BF;
+  overflow:hidden;
+}
+
 header {
   background-color: #0067A3;
   width: 100%;
@@ -27,17 +34,21 @@ header div + div > svg {
 }
 
 header div + div.logo {
-  margin-right: 180px;
+  margin-right: 4%;
 }
 
 
-svg.app, svg.home, svg.quadros,svg.add, svg.info, svg.notification {
+svg.app, svg.home, svg.quadros,svg.add, svg.info, svg.notification, svg.sub-header {
   color: white;
   margin-top: 2px;
   
 }
 
-button.app, button.home, button.quadros, button.add, button.info, button.notification {
+svg.sub-header {
+  background-color: rgba(1,1,1,0);
+}
+
+button.app, button.home, button.quadros, button.add, button.info, button.notification, button.sub-quadros,  button.sub-cronograma, button.sub-cronograma2, button.star, button.area-trabalho, button.sub-automacao   {
   background-color: rgba(255, 255, 255, .3);
   border: none;
   margin-top: 4px;
@@ -45,7 +56,18 @@ button.app, button.home, button.quadros, button.add, button.info, button.notific
   border-radius: 3px;
   height: 31px;
 }
+button.sub-cronograma  {
+  margin-top: 4px;
+}
+button.sub-cronograma p  {
+  margin-top: 5px !important;
+  font-size: 17px;
+  font-weight: bold;
+}
 
+button.sub-quadros {
+  display: inline-flex;
+}
 
 button.quadros {
   display: inline-flex;
@@ -53,11 +75,15 @@ button.quadros {
 
 }
 
-button.quadros p {
+button.quadros p, button.sub-quadros p, button.sub-automacao p,  button.sub-cronograma p,button.sub-cronograma2 p, button.area-trabalho p  {
   color: white;
   font-weight: bold;
   margin-top: 8px;
   margin-left: 5px;
+}
+
+button.area-trabalho p  {
+  font-weight: normal;
 }
 
 input.ir-para {
@@ -68,7 +94,11 @@ input.ir-para {
   margin-left: 5px;
   border-radius: 3px;
   color: white;
+  outline: none;
   padding-left: 5px;
+}
+input.ir-para::placeholder {
+  color: white;
 }
 
 svg.search {
@@ -82,7 +112,7 @@ main {
   height: calc(100vh - 40px);
 }
 
-button.profile {
+button.profile, button.profile2 {
   height: 31px;
   border-radius: 50px;
   margin-left: 5px;
@@ -90,4 +120,275 @@ button.profile {
   margin-right: 5px;
   margin-top: 4px;
   border: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.sub-header {
+  background-color: #0079BF;
+  display: flex;
+  margin-left: 5px;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+
+button.star::before {
+  background-color: black;
+  height: 30px;
+  width: 2px;
+}
+
+div.linha {
+  background-color: #3D99CE;
+  height: 20px;
+  width: 1px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 6px;
+}
+
+
+button.sub-cronograma2 p {
+  font-weight: normal;
+}
+
+button.area-trabalho  {
+  width: 200px;
+}
+
+
+button.area-trabalho svg {
+  width: 20px;
+    float: left;
+    margin-top: 4px;
+}
+
+button.profile2 img {
+  margin-bottom: 3px;
+  margin-left: 16px;
+}
+
+button.profile2 div {
+  
+  margin-top: 7px;
+}
+
+
+button.sub-automacao p {
+  font-weight: normal;
+  
+}
+
+button.sub-automacao {
+  width: 130px;
+}
+
+button.sub-automacao svg {
+  float: left;
+  margin-top: 4px;
+}
+
+
+@media only screEn and (max-width: 1040px){
+
+.sub-header {
+  display: block;
+}
+
+.end {
+  float: right;
+  margin-top: -36px;
+}
+
+}
+
+.end {
+  margin-right: 5px;
+}
+
+@media only screEn and (max-width: 778px){
+
+  .profile-convidar {
+    display: block;
+  }
+  .test {
+    display: block;
+  }
+
+  .end {
+   /* margin-top: -36px;*/
+  }
+  
+  }
+
+  @media only screEn and (max-width: 795px){
+
+
+    input.ir-para {
+      display: none;
+    }
+
+    button.quadros {
+      display: none;
+    }
+
+    button.info,button.info {
+      display: none;
+    }
+    svg.search {
+    margin-left: 4px;
+    background: rgba(255, 255, 255, .3);
+    padding: 4px;
+    border-radius: 5px;
+    margin-top: 4px;
+    }
+  }
+
+  @media only screEn and (max-width: 660px){
+
+    .test div div.flex {
+      margin-top: 37px;
+      margin-left: -309px;
+  
+    }
+  }
+
+  @media only screEn and (max-width: 410px){
+    .end {
+      display: block;
+    }
+    button.sub-automacao {
+      display: block;
+    }
+  }
+
+  @media only screEn and (max-width: 340px){
+    .flex {
+      display: block;
+      margin: 0px !important;
+    } 
+
+    .linha {
+      display: none;
+    }
+    .profile2 {
+      display: block;
+    }
+  }
+
+  .card {
+    background: white;
+    width: 270px;
+    height: max-content;
+    max-height: 82vh;
+    flex-direction: column;
+    display: flex;
+    margin-left: 10px;
+    min-width: 289px;
+    border-radius: 3px;
+    background-color: #EBECF0;
+}
+  main {
+    margin-top: 15px;
+    margin-left: 0px;
+    
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    max-height: 83vh;
+
+  }
+
+
+  .add-card {
+    
+  }
+  .card h3 {
+    font-family: poppins ,Arial, Helvetica, sans-serif;
+    /* margin-left: 20px; */
+    width: max-content;
+    color: rgb(23,43,77);
+    font-size: 1rem;
+    margin-bottom: -5px;
+    padding-bottom: 11px;
+    margin-top: 0px;
+    padding-top: 10px;
+   
+    padding-left: 20px;
+    width: 225px;
+    font-size: 12px;
+    background-color: #EBECF0;
+  }
+
+  .subcard {
+    background-color: white;
+    width: 80%;
+    height: max-content;
+    margin-left: auto;
+    min-height: 30px;
+    margin-right: auto;
+    border-radius: 3px;
+    /* padding-top: 15px; */
+    padding-left: 15px;
+    margin-top: 10px;
+    box-shadow: 0 1px 0 #091e4240;
+  }
+
+  .content {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    background-color: #EBECF0;
+    padding-top: 6px;
+  }
+
+  .card input {
+    border: none;
+    background-color: #EBECF0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    outline: none;
+  }
+
+  .card svg { 
+    margin-bottom: -5px;
+    fill: #EBECF0;
+    margin-left: 18px;
+  }
+
+  .subcard p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .content::-webkit-scrollbar  {
+    border-radius: 10px;
+    width: 8px;
+    height: 4px;
+  }
+.content:-webkit-scrollbar-track-piece {
+  background: #091e4214;
+}
+
+.content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.main::-webkit-scrollbar-track-piece {
+  background: rgb(102,164,199);
+}
+
+.main::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.main::-webkit-scrollbar  {
+  border-radius: 5px;
+  width: 8px;
+  height: 14px;
 }
