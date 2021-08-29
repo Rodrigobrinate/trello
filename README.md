@@ -5,5 +5,3 @@ this projet is a copy of <a href="https://trello.com/"></a> he was created with 
 # React js
 # Css
 # Html
-
-<video src="./review.mp4"></video>
